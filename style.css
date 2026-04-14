@@ -1,0 +1,274 @@
+/* === style.css === */
+:root {
+  --bg-dark: #0d0d0d;
+  --bg-card: #1a1a1a;
+  --primary: #ff6b00;
+  --primary-hover: #cc5500;
+  --text-main: #f5f5f5;
+  --text-muted: #aaaaaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Elemen Profil Global --- */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* --- Navbar Terupdate --- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background-color: var(--bg-card);
+  border-bottom: 2px solid var(--primary);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.nav-logo h1 span {
+  color: var(--primary);
+}
+
+.nav-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--primary);
+}
+
+/* --- Konten Utama --- */
+main {
+  flex: 1;
+  padding: 60px 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Memusatkan secara horizontal */
+  justify-content: center;
+}
+
+/* --- Halaman Beranda (Hero) --- */
+.hero {
+  text-align: center;
+}
+
+.hero .profile-img {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: var(--primary);
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--primary);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* --- Halaman Tentang --- */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+/* --- Card & Section Lainnya --- */
+.page-header {
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--primary);
+}
+
+.card {
+  background-color: var(--bg-card);
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary);
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+ul.custom-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+ul.custom-list li {
+  margin-bottom: 10px;
+  color: var(--text-muted);
+}
+
+ul.custom-list li::before {
+  content: "▹";
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+/* --- Halaman Kontak --- */
+.contact-method-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--text-main);
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.contact-icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-muted);
+  transition: transform 0.3s, color 0.3s;
+}
+
+.contact-icon-link:hover {
+  transform: scale(1.1);
+  color: var(--primary);
+}
+
+.contact-icon-link i {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.contact-icon-link span {
+  font-size: 0.9rem;
+}
+
+/* --- Form Kontak --- */
+.contact-form-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--bg-dark);
+  border: 1px solid #333;
+  color: white;
+  border-radius: 5px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  border-top: 1px solid #333;
+  margin-top: auto;
+}
